@@ -1,15 +1,13 @@
-import { route } from 'next/dist/next-server/server/router';
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const index = ({ photo }) => {
     const router = useRouter();
-    console.log(router)
     const { title, url } = photo
     return (
         <div>
-            <h2>image {router.query.id}</h2>
+            <h2>{title}</h2>
             <Image src={url} width={500} height={500} />
             <Link href="/photos">
                 <a>go back</a>
