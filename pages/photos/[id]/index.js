@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 const index = ({ photo }) => {
-    const router = useRouter();
     const { title, url } = photo
     return (
         <div>
