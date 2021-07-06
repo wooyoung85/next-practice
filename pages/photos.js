@@ -13,7 +13,7 @@ const photos = ({ photos }) => {
                     <li key={photo.id}>
                         <Link href={`/photos/${photo.id}`}>
                             <a><Image src={photo.thumbnailUrl} width={100} height={100} alt={photo.title} />
-                                <span>{photo.title}</span></a>
+                                <p>{photo.title}</p></a>
                         </Link>
 
                     </li>

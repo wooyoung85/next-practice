@@ -1,12 +1,15 @@
-import Head from "next/head";
+import homeStyles from '../styles/Home.module.css'
 
 export default function Home({posts}) {
   return (
     <div>
-      <h1>Welcome to My Blog</h1>
-      <ul>
+      <h1>Recent Posts</h1>
+      <ul className={homeStyles.posts}>
         {posts.map(post=>(
-          <li key={post.id}>{post.title}</li>
+          <li key={post.id}>
+            <h3>{post.title}</h3>
+            <p>{post.body}</p>
+          </li>
         ))}
       </ul>
     </div>
